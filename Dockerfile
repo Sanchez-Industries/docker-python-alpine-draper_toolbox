@@ -4,6 +4,7 @@ RUN apk add --no-cache gcc make cmake
 RUN apk add --no-cache git gnupg wget curl
 RUN apk add --no-cache rsync ssh-audit
 RUN apk add --no-cache npm ruby ruby-dev
+RUn apk add --no-cache elinks
 #RUN gem install rdoc timetrap
 RUN mkdir /menu
 RUN chmod a+r /menu

