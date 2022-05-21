@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from os import system
 while True:
-    system("clear")
+    #system("clear")
     print("Hey John what do you want to do?")
     print("1) install one or more python3 library.")
     print("2) use python interpreter on terminal.")
@@ -38,4 +38,4 @@ while True:
         system("elinks")
 
 
-exit(0)
+        exit(0)
