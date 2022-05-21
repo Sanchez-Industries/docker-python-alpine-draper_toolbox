@@ -1,0 +1,12 @@
+FROM alpine:latest
+RUN apk add --no-cache python3 py3-pip
+RUN apk add --no-cache gcc make cmake
+RUN apk add --no-cache git gnupg wget curl
+RUN apk add --no-cache rsync ssh-audit
+RUN apk add --no-cache npm ruby ruby-dev
+#RUN gem install rdoc timetrap
+RUN mkdir /menu
+RUN chmod a+r /menu
+COPY menu.py /menu/menu.py
+RUN chmod a+x /menu/menu.py
+ENTRYPOINT ["/menu/menu.py"]
