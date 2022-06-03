@@ -1,4 +1,19 @@
 #!/usr/bin/python3
+import keyboard
+
+menuPos = 0
+
+def menuUp():
+    global menuPos
+    menuPos -= 1
+
+def menuDown():
+    global menuPos
+    menuPos += 1
+  
+keyboard.add_hotkey('page up', lambda: menuUp())
+keyboard.add_hotkey('page down', lambda: menuDown())
+
 from os import system
 while True:
     system("clear")
