@@ -1,6 +1,7 @@
 FROM alpine:latest
 RUN apk add --no-cache python3 py3-pip
 RUN apk add --no-cache gcc make cmake
+# note: add an web dump option
 RUN apk add --no-cache git gnupg wget curl
 RUN apk add --no-cache rsync ssh-audit
 RUN apk add --no-cache npm ruby ruby-dev
